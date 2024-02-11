@@ -1,0 +1,120 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://www.daysoftheyear.com/wp-content/uploads/valentines-day-concept-2021-12-14-20-37-41-utc-scaled.jpg') center/cover no-repeat;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    background-color: rgba(255, 255, 255, 0.8); /* Add a semi-transparent white background for better readability */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+  }
+  
+  h1 {
+    font-family: 'Pacifico', cursive; /* Example of using a custom font */
+    font-size: 3em; /* Adjust font size */
+    color: #e8491d;
+    letter-spacing: 2px; /* Add letter spacing for a stylish look */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Add a subtle text shadow */
+    transition: color 0.5s ease;
+  }
+  
+  h1:hover {
+    color: #c2391a; /* Change color on hover */
+  }
+  
+  #secret-message {
+    display: none;
+    font-size: 20px;
+    color: #e8491d;
+    font-weight: bold;
+    transition: color 0.5s ease;
+  }
+  
+  #secret-message:hover {
+    color: #c2391a; /* Change color on hover */
+  }
+  
+  #reveal-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #e8491d;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #reveal-button:hover {
+    background-color: #c2391a;
+    transform: scale(1.05); /* Add a slight scale effect on hover */
+  }
+  
+  .animations-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+  
+  .heart{
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    line-height: 20px;
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .heart {
+    color: #e8491d;
+    animation: floatHeart 5s linear infinite, rotateHeart 2s linear infinite;
+    transform-origin: center;
+  }
+  
+  
+  
+  @keyframes floatHeart {
+    0%, 100% {
+      transform: translateY(0) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translateY(-50px) scale(1.2);
+      opacity: 0.7;
+    }
+  }
+  
+  @keyframes rotateHeart {
+    0%, 100% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(180deg);
+    }
+  }
+  
+  @keyframes burstCracker {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(2);
+      opacity: 0;
+    }
+  }
+  
